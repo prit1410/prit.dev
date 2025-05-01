@@ -1,0 +1,129 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 250 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 250 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 10% 15%;
+
+    --primary: 252 56% 66%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 250 38% 58%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 250 10% 94%;
+    --muted-foreground: 250 10% 40%;
+
+    --accent: 273 94% 59%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 250 10% 90%;
+    --input: 250 10% 90%;
+    --ring: 250 60% 60%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 252 56% 66%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 250 38% 58%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 273 94% 59%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-portfolio-primary/20 dark:bg-portfolio-primary/40 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-portfolio-primary/60 dark:bg-portfolio-primary/80;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-portfolio-primary to-portfolio-accent text-transparent bg-clip-text;
+  }
+  
+  .skill-bar {
+    @apply h-3 rounded-full overflow-hidden bg-muted dark:bg-gray-700 relative;
+  }
+  
+  .skill-progress {
+    @apply h-full absolute top-0 left-0 bg-gradient-to-r from-portfolio-primary to-portfolio-accent;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-portfolio-primary/20 dark:hover:shadow-portfolio-accent/20 hover:-translate-y-1;
+  }
+  
+  .glassmorphism {
+    @apply bg-white/70 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 rounded-md text-foreground dark:text-gray-300 hover:text-portfolio-primary dark:hover:text-portfolio-accent transition-colors duration-200;
+  }
+  
+  .nav-link-active {
+    @apply px-4 py-2 rounded-md text-portfolio-primary dark:text-portfolio-accent font-medium;
+  }
+}
