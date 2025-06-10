@@ -30,7 +30,7 @@ const Resume = () => {
             asChild
           >
             <a 
-              href="https://drive.google.com/file/d/1PyO4s69MEb0jBn4_dwzhYr8z3t06yf_f/view?usp=drive_link"
+              href="https://drive.google.com/file/d/14Ym37_rB8GgYdcLnI30ewLpjKqApuIpS/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
