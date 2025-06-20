@@ -14,7 +14,7 @@ const Projects = () => {
       ],
       tags: ["Next.js", "AI", "TypeScript", "Tailwind CSS"],
       image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1749537623/image_generator/screenshots/rr4pd40eitrn6mqturpz.png",
-      link: "/pixagram.html"
+      link: "https://prit1410.github.io/pixagram/pixagram.html"
     },
     {
       title: "E-Learning Website",
@@ -29,7 +29,7 @@ const Projects = () => {
       features: ["Expense tracking", "AI Suggestions", "Analytics and Chart view"],
       tags: ["Flutter", "Firebase", "AI", "SQLite"],
       image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1749539259/thumbnail/alscmvmhkqi9sw5vytdf.png",
-      link: "https://drive.google.com/file/d/1Z2n14a8T1jenpwZH-mAtVe_w0_s_uQCg/view?usp=sharing"
+      link: "https://prit1410.github.io/expensevista/expensevista.html"
     }
   ];
 
