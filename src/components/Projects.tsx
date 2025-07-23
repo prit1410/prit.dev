@@ -24,11 +24,11 @@ const Projects = () => {
       image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1749538328/thumbnail/fza5zbq0gzup3evc76kd.png"
     },
     {
-      title: "ExpeneVista – Budget Management System",
+      title: "ExpeneVista – AI Budget Management System",
       description: "Flutter application with modern UI and AI integrations",
       features: ["Expense tracking", "AI Suggestions", "Analytics and Chart view"],
       tags: ["Flutter", "Firebase", "AI", "SQLite"],
-      image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1749539259/thumbnail/alscmvmhkqi9sw5vytdf.png",
+      image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1753249045/Wil_dnnt6q.png",
       link: "https://prit1410.github.io/expensevista/expensevista.html"
     }
   ];
