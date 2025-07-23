@@ -40,8 +40,6 @@ const Resume = () => {
           </Button>
         </motion.div>
       </motion.div>
-
-      {/* Add the Inspiring Thoughts section */}
       <InspiringThoughts />
     </section>
   );
