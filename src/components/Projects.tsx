@@ -4,6 +4,32 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const Projects = () => {
   const projects = [
     {
+      title: "PairPlay - The Couple App That Brings You Closer ❤️",
+      description:
+        "Most couples do not break because of big problems. They slowly drift apart because of small disconnects. PairPlay is your daily relationship companion designed to bring you closer, spark meaningful conversations, and keep the connection alive.",
+      features: [
+        "58+ premium activity categories for deep talks and playful challenges",
+        "AI relationship advisor with personalized communication suggestions",
+        "Journey and memories space to capture moments and build your shared story",
+        "Daily engagement flow to connect instantly without overthinking",
+        "Built for couples, long-distance relationships, and busy partners"
+      ],
+      tags: ["Flutter", "Firebase", "AI", "Play Store"],
+      image: "/projects/pairplay/Mian banner Playstore.png",
+      link: "https://play.google.com/store/apps/details?id=com.mindra.pairplay",
+      websiteLink: "https://pairplaycouples.app",
+      screenshots: [
+        "/projects/pairplay/1.png",
+        "/projects/pairplay/2.png",
+        "/projects/pairplay/3.png",
+        "/projects/pairplay/4.png",
+        "/projects/pairplay/5.png",
+        "/projects/pairplay/6.png",
+        "/projects/pairplay/7.png",
+        "/projects/pairplay/8.png"
+      ]
+    },
+    {
       title: "Pixagram - Social AI Image Generator",
       description: "A social platform for AI-powered image generation with interactive features",
       features: [
@@ -53,8 +79,8 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <a href={project.link} className="block h-full" target="_blank" rel="noopener noreferrer">
-                <Card className="overflow-hidden card-hover border-portfolio-primary/10 h-full cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
+              <Card className="overflow-hidden card-hover border-portfolio-primary/10 h-full transition-transform duration-300 hover:scale-[1.02]">
+                <a href={project.link ?? "#"} className="block" target="_blank" rel="noopener noreferrer">
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <img 
                       src={project.image} 
@@ -72,6 +98,7 @@ const Projects = () => {
                   <CardHeader className="bg-gradient-to-r from-portfolio-primary/5 to-portfolio-accent/5">
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
+                </a>
                   
                   <CardContent className="pt-6">
                     <h4 className="font-medium mb-2">Key Features:</h4>
@@ -96,9 +123,58 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
+
+                    {(project.link || project.websiteLink) && (
+                      <div className="flex flex-wrap gap-3 mt-5">
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-portfolio-primary hover:underline"
+                          >
+                            Play Store
+                          </a>
+                        )}
+                        {project.websiteLink && (
+                          <a
+                            href={project.websiteLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-portfolio-primary hover:underline"
+                          >
+                            Website
+                          </a>
+                        )}
+                      </div>
+                    )}
+
+                    {project.screenshots && project.screenshots.length > 0 && (
+                      <div className="mt-6">
+                        <h4 className="font-medium mb-3">Screenshots:</h4>
+                        <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory [scrollbar-width:thin]">
+                          {project.screenshots.map((shot, shotIndex) => (
+                            <a
+                              key={shot}
+                              href={shot}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="snap-start shrink-0 min-w-[130px] sm:min-w-[160px] md:min-w-[180px] rounded-xl border border-portfolio-primary/20 bg-gradient-to-b from-background to-muted/30 p-2 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+                              aria-label={`${project.title} screenshot ${shotIndex + 1}`}
+                            >
+                              <img
+                                src={shot}
+                                alt={`${project.title} screenshot ${shotIndex + 1}`}
+                                className="w-full h-auto max-h-52 object-contain rounded-lg"
+                                loading="lazy"
+                              />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
-              </a>
             </motion.div>
           ))}
         </div>
